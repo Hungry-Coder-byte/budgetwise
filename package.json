@@ -1,0 +1,62 @@
+{
+  "name": "budgetwise",
+  "version": "1.0.0",
+  "description": "A personal finance dashboard application to track income, expenses, and visualize spending patterns.",
+  "main": "backend/src/index.ts",
+  "private": true,
+  "scripts": {
+    "backend": "node backend/src/index.ts",
+    "frontend": "vite",
+    "dev": "concurrently \"node backend/src/index.ts\" \"vite\"",
+    "build": "concurrently \"node backend/src/index.ts\" \"vite build\"",
+    "lint": "eslint 'src/**/*.ts'",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "personal finance",
+    "budgeting",
+    "expense tracking",
+    "income tracking",
+    "dashboard"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.8.0",
+    "bcryptjs": "^2.1.16",
+    "cors": "^2.8.5",
+    "express": "^0.29.8",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^7.7.0",
+    "zod": "^3.21.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "mongodb": "^6.3.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/budgetwise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/budgetwise/issues"
+  },
+  "homepage": "https://github.com/your-repo/budgetwise",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run type-check"
+    }
+  }
+}
